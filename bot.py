@@ -3,11 +3,11 @@ import telebot
 from telebot import types
 
 # Все, что тебе нужно:
-token = "5039903049:AAHPgTA_ZV858Dg3tHwNqEFEAXVKVzBgQNE" # токен основного бота
-id = "1701476221" # Твой ид, что-бы бот кидал тебе все, что происходит в боте
-site = "https://qiwi.com/n/V4PETASTIC" # Cсылка оплаты(в конце ссылки пишите ваш ник QIWI)
-channel = "https://t.me/vapetastic" # Канал 
-op = "@thefishexecutive" # Аккаунт оператора
+token = "" # токен основного бота
+id = "" # Твой ид, что-бы бот кидал тебе все, что происходит в боте
+site = "https://qiwi.com/n/" # Cсылка оплаты(в конце ссылки пишите ваш ник QIWI)
+channel = "" # Канал 
+op = "" # Аккаунт оператора
 
 bot = telebot.TeleBot(token)
 
@@ -25,7 +25,7 @@ def repeat_all_messages(message):
   button8 = types.InlineKeyboardButton(text="Другой город", callback_data="button8")
 
   keyboard.add(button1, button2, button3, button4, button5, button6, button7, button8)
-  bot.send_message(message.chat.id, "🛍Добро пожаловать в бот-магазин ScandWorld.\nℹ️ИНФО-канал со скидками и новостями: "+str(channel)+"\n⚙️Оператор поддержки: "+str(op)+"\n☘️Пожалуйста, выберите город:", reply_markup=keyboard)
+  bot.send_message(message.chat.id, "🛍Добро пожаловать в бот-магазин Имя канала.\nℹ️ИНФО-канал со скидками и новостями: "+str(channel)+"\n⚙️Оператор поддержки: "+str(op)+"\n☘️Пожалуйста, выберите город:", reply_markup=keyboard)
 
 def button(message, city):
   keyboard1 = types.InlineKeyboardMarkup()
